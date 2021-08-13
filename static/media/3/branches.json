@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Resistance of Fire",
+        "slug": "fire",
+        "id": 1,
+        "featuredMedia": {
+            "src": "/media/3/fire-01.png",
+            "alt": "tktk"
+        }
+    },
+    {
+        "name": "Resistance of Non-Jews Saving Jews",
+        "slug": "saving-jews",
+        "id": 2,
+        "featuredMedia": {
+            "src": "/media/3/saving-jews-01.png",
+            "alt": "tktk"
+        }
+    },
+    {
+        "name": "Spiritual Resistance",
+        "slug": "spiritual",
+        "id": 3,
+        "featuredMedia": {
+            "src": "/media/3/spiritual-01.png",
+            "alt": "tktk"
+        }
+    }
+]

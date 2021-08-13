@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "slug": "introduction",
+        "name": "Introduction - Tuchyn, Ukraine",
+        "content": {},
+        "outline": {
+            "description": "The introduction will ground people in a sense of place in Tuchyn, Ukraine, a place which our visitors will not be familiar with. The initial sequence will also introduce the theme of the tree. Visitors will then be able to choose between three people’s stories, learning about them and getting a sense of what is to come.  This section welcomes people into the exhibit and introduces them to both the experience and the story. ",
+            "items": [
+                {
+                    "text": "Introductory Sequence introducing exhibit and tree"
+                },
+                {
+                    "text": "3 Branches"
+                }
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "slug": "occupation",
+        "name": "The Occupation",
+        "content": {
+            "storyMap": {
+                "name": "Occupation",
+                "img": "/media/2/map.jpg"
+            }
+        },
+        "outline": {
+            "description": "This section is created in the form of a storymap, a map with five locations in which each one tells a story. Visitors will choose three to five sites to visit. When they click on a site, they can either read the survivor’s account or to the survivor/their descendant read the account. Images will accompany the text. When the students are done with the map, they will have a chance to “talk back.” They will be given a prompt question about discrimination and the results will then become a word cloud in the shape of a tree or leaves on a tree. This activity will then “unlock” the next section of the exhibit (Resistance). This talk back experience has two functions: 1) it is a way to help the students recall what they learned and 2) it will prime the pump for the discussion and interaction with the physical installation of the three trees (each dedicated to one talkback question).",
+            "items": [
+                {
+                    "text": "Map of German Occupation sites"
+                },
+                {
+                    "text": "Talk back: Occupation"
+                }
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "slug": "resistance",
+        "name": "The Resistance",
+        "content": {},
+        "outline": {
+            "description": "The section begins with a transition, animating the fire burning down the ghetto. A short film will then appear that describes the Tuchyn ghetto uprising and the different ways that people resisted. At the end, the screen will transition back into a fire and will fade to black. This will be followed by a talkback section.They will be given a prompt question about forms of resistance and the results will then become part of flames of a fire. This activity will then “unlock” the next section of the exhibit.",
+            "items": [
+                {
+                    "text": "Introduction"
+                },
+                {
+                    "text": "Film about Resistance"
+                },
+                {
+                    "text": "Talkback: Resistance"
+                }
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "slug": "aftermath",
+        "name": "The Aftermath",
+        "content": {},
+        "outline": {
+            "description": "To transition from the last section, the screen will fade back into the Jewish ghetto and it will be burnt down. The screen will pan the user to the forest/tree and the story of the massacres in Tuchyn will be told. The stories will be presented similarly to that used in the Introduction - a Beba Epstein-style graphic reading of the story.  The personal narratives section will be organized by questions. For instance: “Where did you go after the fire?” “What happened to the Jews of Tuchyn?” and “When did the war end - where did you go?” The answers will take the form of short, 1-2 minute videos. The videos will be in the first person or will be told by descendants",
+            "items": [
+                {
+                    "text": "Overview of Killings in Aftermath of Fire"
+                },
+                {
+                    "text": "3 Branches Q&A Storymap"
+                },
+                {
+                    "text": "Talkback: Aftermath - What's your question?"
+                }
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "slug": "conclusion",
+        "name": "Conclusion - Tree of Life",
+        "content": {},
+        "outline": {
+            "description": "The user will be guided back to the main tree (based on the one near  the Schwartzman home). They will hear narration about the tree of life in Jewish culture and will be taken up through the bark and watch as leaves fall to the ground with possibly a note of a song playing as each leaf falls. The leaves could have photos of people from Tuchyn who died on them, with their names etched on them. The leaves should give a sense of the mass scale of people who died (so many, many). When the large number of leaves fall, only a few seeds survive and get embedded into the ground and sprout saplings. The seeds can have the images and names of descendants. It will finally close with an invitation to help tell this story of Tuchyn by adding to the forest of trees that has visited their school.",
+            "items": [
+                {
+                    "text": "Tree of Life animation / interactive"
+                },
+                {
+                    "text": "Physical activity prompt"
+                }
+            ]
+        }
+    }
+]

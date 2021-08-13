@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "name": "Zaltsman House",
+        "lat": 50.7003356,
+        "lng": 26.5719255
+    },
+    {
+        "id": 1,
+        "name": "Chomut House",
+        "lat": 50.6988032,
+        "lng": 26.570062
+    },
+    {
+        "id": 2,
+        "name": "Former Synagogue",
+        "lat": 50.7082228,
+        "lng": 26.57203
+    },
+    {
+        "id": 3,
+        "name": "German Barracks",
+        "lat": 50.698633,
+        "lng": 26.5661871
+    },
+    {
+        "id": 4,
+        "name": "Ghetto Memorial",
+        "lat": 50.7002303,
+        "lng": 26.5713738
+    }
+]

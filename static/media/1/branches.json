@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Laura Oberlender",
+        "slug": "laura",
+        "id": 1,
+        "featuredMedia": {
+            "src": "/media/1/Laura-01.png",
+            "alt": "tktk"
+        }
+    },
+    {
+        "name": "Miriam Schwartzman Kouts",
+        "slug": "miriam",
+        "id": 2,
+        "featuredMedia": {
+            "src": "/media/1/Miriam-01.png",
+            "alt": "tktk"
+        }
+    },
+    {
+        "name": "Yosef Zilberberg",
+        "slug": "yosef",
+        "id": 3,
+        "featuredMedia": {
+            "src": "/media/1/Yosef-01.png",
+            "alt": "tktk"
+        }
+    }
+]
