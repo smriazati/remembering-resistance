@@ -1,5 +1,6 @@
 export default {
   head: {
+    target: "static",
     titleTemplate: "Remembering Resistance: %s",
     htmlAttrs: {
       lang: "en"

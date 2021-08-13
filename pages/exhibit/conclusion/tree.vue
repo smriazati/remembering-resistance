@@ -21,7 +21,7 @@
         </button>
       </nav>
       <button>
-        <nuxt-link to="/exhibit/conclusion/talkback">Finish</nuxt-link>
+        <nuxt-link to="/exhibit/conclusion/prompt">Finish</nuxt-link>
       </button>
     </footer>
   </div>
