@@ -2,8 +2,6 @@ export const state = () => ({
     hasSession: null,
     name: null,
     sessionCode: null,
-    // name: 'Sarah', // reset to null
-    // sessionCode: '01', // reset to null
     isExpanded: true
 })
 

@@ -72,23 +72,23 @@ export default {
   },
   methods: {
     previewMarker(markerId) {
-      console.log(
-        "previewing marker",
-        markerId,
-        "name is",
-        this.markers.filter((section) => section.id === markerId)[0].name
-      );
+      // console.log(
+      //   "previewing marker",
+      //   markerId,
+      //   "name is",
+      //   this.markers.filter((section) => section.id === markerId)[0].name
+      // );
       this.$store.commit(`${this.name}/previewStory`, markerId);
     },
     unpreviewMarker(markerId) {
       this.$store.commit(`${this.name}/unpreviewStory`, markerId);
     },
     highlightMarker(markerId, isHighlighted) {
-      if (isHighlighted) {
-        console.log("highlighting marker with id", markerId);
-      } else {
-        console.log("unhighlighting marker with id", markerId);
-      }
+      // if (isHighlighted) {
+      //   // console.log("highlighting marker with id", markerId);
+      // } else {
+      //   // console.log("unhighlighting marker with id", markerId);
+      // }
       document
         .getElementsByClassName(`m-${markerId}`)[0]
         ?.classList?.toggle("marker-highlight", isHighlighted);
@@ -97,13 +97,13 @@ export default {
       this.$maps.centerMap(this.center.lat, this.center.lng);
     },
     muteMarker(markerId) {
-      console.log("muting marker", markerId);
+      // console.log("muting marker", markerId);
       document
         .getElementsByClassName(`m-${markerId}`)[0]
         ?.classList?.add("marker-viewed");
     },
     unmuteMarker(markerId) {
-      console.log("unmuting marker", markerId);
+      // console.log("unmuting marker", markerId);
       document
         .getElementsByClassName(`m-${markerId}`)[0]
         ?.classList?.remove("marker-viewed");

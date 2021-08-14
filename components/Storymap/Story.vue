@@ -1,5 +1,5 @@
 <template>
-  <div class="container storymap-story">
+  <div ref="story" class="container storymap-story">
     <div class="story-wrapper">
       <header v-if="story.title" class="title-wrapper">
         <!-- <ContentBanner :h2="story.title" /> -->
@@ -27,9 +27,26 @@
 </template>
 
 <script>
+import animations from "~/mixins/storymapAnimations.js";
 export default {
   props: {
     story: Object,
+  },
+  data() {
+    return {
+      isMounted: false,
+    };
+  },
+  mixins: [animations],
+  watch: {
+    isMounted() {
+      if (!this.isMounted) {
+        return false;
+      }
+      this.$nextTick(function () {
+        this.setAnimations();
+      });
+    },
   },
   computed: {
     hasMedia() {
@@ -43,7 +60,17 @@ export default {
       return true;
     },
   },
+  mounted() {
+    this.isMounted = true;
+  },
   methods: {
+    setAnimations() {
+      if (!gsap || !ScrollTrigger || this.initAnimations === undefined) {
+        console.log("cancelling animation, no gsap or st or mixin exists");
+        return;
+      }
+      this.initAnimations();
+    },
     closeMap() {
       this.$emit("close-map");
     },

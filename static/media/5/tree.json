@@ -1,0 +1,68 @@
+{
+    "perished": [
+        {
+            "name": "Berel Fiks",
+            "image": "/media/5/perished/01.jpeg"
+        },
+        {
+            "name": "Etel Fiks",
+            "image": "/media/5/perished/02.jpeg"
+        },
+        {
+            "name": "Gilberg M",
+            "image": "/media/5/perished/03.jpeg"
+        },
+        {
+            "name": "Hersh Horn",
+            "image": "/media/5/perished/04.jpeg"
+        },
+        {
+            "name": "Khaim Nakhum",
+            "image": "/media/5/perished/05.jpeg"
+        },
+        {
+            "name": "Moshe Gilberg",
+            "image": "/media/5/perished/06.jpeg"
+        },
+        {
+            "name": "Rivka Fuks",
+            "image": "/media/5/perished/07.jpeg"
+        },
+        {
+            "name": "Suchar Rozman Sokher Miriam Musia",
+            "image": "/media/5/perished/08.jpeg"
+        }
+    ],
+    "survivorsDescendents": [
+        {
+            "name": "Anne Parsons",
+            "location": "Greensboro",
+            "relationship": "Great Great Niece of Aryeh Glazer",
+            "image": "/media/5/survivors_descendents/01.png"
+        },
+        {
+            "name": "Aurite Kouts",
+            "location": "France",
+            "relationship": "Great Grandaughter of Getzl Schwartzman",
+            "image": "/media/5/survivors_descendents/02.png"
+        },
+        {
+            "name": "Michael Emmett",
+            "location": "Texas",
+            "relationship": "Son of Yitzchak Chomut",
+            "image": "/media/5/survivors_descendents/03.png"
+        },
+        {
+            "name": "Noam Zilberberg",
+            "location": "Israel",
+            "relationship": "Son of Yosef Zilberbergr",
+            "image": "/media/5/survivors_descendents/04.png"
+        },
+        {
+            "name": "Peter Glazer",
+            "location": "California",
+            "relationship": "Great Grandson of Aryeh Glazer",
+            "image": "/media/5/survivors_descendents/05.png"
+        }
+    ]
+}

@@ -86,12 +86,12 @@ export default {
       const layout = document.getElementById("__layout");
       const layoutHeight = layout.offsetHeight;
       const windowHeight = window.innerHeight;
-      console.log(layoutHeight, windowHeight);
+      // console.log(layoutHeight, windowHeight);
       if (layoutHeight > windowHeight) {
         const exhibitNav = this.$refs.exhibitNav;
-        console.log(
-          exhibitNav.querySelector(".exhibit-navigation").offsetHeight
-        );
+        // console.log(
+        //   exhibitNav.querySelector(".exhibit-navigation").offsetHeight
+        // );
         if (exhibitNav) {
           this.exhibitNavHeight = exhibitNav.querySelector(
             ".exhibit-navigation"

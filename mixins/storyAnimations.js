@@ -73,25 +73,33 @@ export default {
                     if (imageWrappers) {
                         // console.log(imageWrappers);
                         imageWrappers.forEach((element) => {
+                            const elementImg = element.querySelector('img');
+                            const storyHeight = story.offsetHeight;
+                            if (elementImg) {
+                                gsap.set(elementImg, {
+                                    opacity: 0
+                                })
+                                gsap.to(elementImg, {
+                                    opacity: 1,
+                                    scrollTrigger: {
+                                        trigger: story,
+                                        start: `top-=${windowHeight / 2} top`,
+                                        end: `bottom-=${storyHeight / 4} top`,
+                                        scrub: 0.5
+                                    },
+                                })
+                            }
                             gsap.set(element, {
-                                // opacity: 0,
                                 y: `-${windowHeight}`,
                             });
 
                             gsap.to(element, {
                                 y: `${windowHeight}`,
-                                // y: 100,
-                                opacity: 1,
                                 scrollTrigger: {
                                     trigger: story,
                                     start: `top-=${windowHeight / 2} top`,
-                                    // start: `top top+=${windowHeight / 2}`,
-                                    // start: `top top`,
                                     end: "bottom top",
                                     scrub: 0.5,
-                                    // pin: true,
-                                    // pinSpacing: false,
-                                    // markers: true,
                                 },
                             });
                         });

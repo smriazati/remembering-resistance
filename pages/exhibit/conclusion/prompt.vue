@@ -1,30 +1,28 @@
 <template>
-  <div class="container">
-    <div class="modal-wrapper">
-      <div class="modal-container">
-        <div class="text-wrapper">
-          <p>
-            Instructions for in-person activity. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Nam vitae nisi vitae leo aliquet
-            suscipit ac ut dui. Donec a urna posuere, auctor sapien vitae,
-            semper eros. Duis et cursus nulla. Donec erat felis, lobortis ac
-            ornare vitae, maximus molestie augue. Donec non risus urna. Vivamus
-            sit amet enim id tellus facilisis dapibus sit amet in est. Donec ac
-            ex porta, blandit diam semper, venenatis libero.
-          </p>
-        </div>
-        <div class="call-to-action">
-          <button @click="resetExhibit">
-            <span>Start exhibit again</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="submissions">
-      {{ $store.state.submissions.submissions }}
+  <div class="exhibit-intro-page">
+    <div
+      class="background-overlay cover-bg"
+      :style="`
+        background-image: url('https://res.cloudinary.com/dn8rmd4ql/video/upload/v1628906458/remembering-resistance-videos/tree-v1_g35ibo.jpg');
+      `"
+    ></div>
+    <div class="text-wrapper center">
+      <h1>End of Digital Exhibit</h1>
+
+      <nav class="call-to-action">
+        <button @click="resetExhibit">
+          <span>Restart Exhibit</span>
+        </button>
+        <button @click="openSubmissions">
+          <span>View your submissions</span>
+        </button>
+      </nav>
+      <div></div>
     </div>
   </div>
 </template>
+
+
 
 <script>
 export default {
@@ -33,6 +31,9 @@ export default {
       this.$store.commit("submissions/resetExhibit");
       this.$store.commit("occupation/resetSection");
       this.$router.push("/");
+    },
+    openSubmissions() {
+      this.$store.commit("submissions/openSubmissions");
     },
   },
   mounted() {

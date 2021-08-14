@@ -25,7 +25,10 @@
           >
             <span> Submit</span>
           </button>
-          <button v-if="thisTalkback.storyPath" @click="goBackToStory">
+          <button
+            v-if="thisTalkback.storyPath && !this.isSubmissions"
+            @click="goBackToStory"
+          >
             <span> Need help? Go back</span>
           </button>
         </div>
@@ -41,7 +44,7 @@
           <button @click="openSubmissions">
             <span>View all submissions</span>
           </button>
-          <button>
+          <button v-if="!this.isSubmissions">
             <nuxt-link :to="`/exhibit/${thisTalkback.next}`">
               Go to next
             </nuxt-link>
@@ -58,6 +61,10 @@ export default {
     promptId: {
       type: String,
       required: true,
+    },
+    isSubmissions: {
+      type: Boolean,
+      required: false,
     },
   },
   data() {
@@ -120,7 +127,12 @@ export default {
     },
     goToNext() {},
     openSubmissions() {
-      this.$store.commit("submissions/openSubmissions");
+      if (this.isSubmissions) {
+        // on final submissions page -
+        this.$emit("close-editor");
+      } else {
+        this.$store.commit("submissions/openSubmissions");
+      }
     },
     submitResponse() {
       this.$store.commit("submissions/submitResponse", this.newSubmission);
@@ -134,7 +146,6 @@ export default {
       this.$store.commit("submissions/deleteResponse", this.newSubmission.id);
     },
     editResponse() {
-      // this.submissionText = this.thisTalkback.response;
       this.isEditing = true;
       this.submissionText = this.thisTalkback.response;
       this.$store.commit("submissions/deleteResponse", this.newSubmission.id);
