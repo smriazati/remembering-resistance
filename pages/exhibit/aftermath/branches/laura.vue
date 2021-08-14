@@ -1,5 +1,6 @@
 <template>
   <div ref="wrapper" class="container slider-container">
+    <div class="component"></div>
     <div class="wrapper">
       <div class="label">
         <div class="text-decoration"></div>
@@ -24,19 +25,35 @@
         <div class="slider-slides">
           <div class="slider-item" data-active-slide="true">
             <h2>What happened to your sister Chana?</h2>
-            <ContentVideo src="/media/4/laura-01.mp4" :controls="true" />
+            <ContentVideo
+              :src="`https://res.cloudinary.com/dn8rmd4ql/video/upload/v1628898350/remembering-resistance-videos/laura-01_vup0gh.mp4`"
+              :controls="true"
+              :autoplay="false"
+            />
           </div>
           <div class="slider-item">
             <h2>Where did you go after the Germans left Tuchyn?</h2>
-            <ContentVideo src="/media/4/laura-02.mp4" :controls="true" />
+            <ContentVideo
+              :src="`https://res.cloudinary.com/dn8rmd4ql/video/upload/v1628898222/remembering-resistance-videos/laura-02_jufr70.mp4`"
+              :controls="true"
+              :autoplay="false"
+            />
           </div>
           <div class="slider-item">
             <h2>What happened to Jewish refugees?</h2>
-            <ContentVideo src="/media/4/laura-03.mp4" :controls="true" />
+            <ContentVideo
+              :src="`https://res.cloudinary.com/dn8rmd4ql/video/upload/v1628898329/remembering-resistance-videos/laura-03_kdkfub.mp4`"
+              :controls="true"
+              :autoplay="false"
+            />
           </div>
           <div class="slider-item">
             <h2>Why did you emigrate to the United States?</h2>
-            <ContentVideo src="/media/4/laura-04.mp4" :controls="true" />
+            <ContentVideo
+              :src="`https://res.cloudinary.com/dn8rmd4ql/video/upload/v1628898284/remembering-resistance-videos/laura-04_m7htyg.mp4`"
+              :controls="true"
+              :autoplay="false"
+            />
           </div>
         </div>
       </div>
@@ -46,13 +63,13 @@
 
 <script>
 import animation from "~/mixins/sliderAnimations.js";
-
 export default {
   data() {
     return {
       lastSlide: null,
       activeSlide: null,
       slideCount: null,
+
       // isMounted: false,
     };
   },
@@ -125,3 +142,4 @@ export default {
   },
 };
 </script>
+

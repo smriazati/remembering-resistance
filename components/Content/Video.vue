@@ -1,27 +1,20 @@
 <template>
-  <div class="video-wrapper">
-    <div v-if="!controls">
-      <div v-if="autoplay">
-        <video ref="video" :src="src" muted :autoplay="autoplay"></video>
-      </div>
-      <div v-if="!autoplay">
-        <video ref="video" :src="src"></video>
-      </div>
-    </div>
-    <div v-if="controls">
-      <div v-if="autoplay">
-        <video
-          ref="video"
-          :src="src"
-          controls="true"
-          muted
-          :autoplay="autoplay"
-        ></video>
-      </div>
-      <div v-if="!autoplay">
-        <video ref="video" :src="src" controls="true"></video>
-      </div>
-    </div>
+  <div ref="video" class="video-wrapper">
+    <!-- {{ videoTag }} -->
+    <video :controls="controls" :autoplay="autoplay" :loop="loop">
+      <source :src="src" type="video/mp4" />
+      <source type="mp4" />
+    </video>
+    <!-- <cld-video
+      :public-id="videoSrc"
+      width="500"
+      crop="scale"
+      quality="auto"
+      :autoplay="autoplay"
+      :muted="autoplay"
+      :controls="controls"
+      :lazy="true"
+    /> -->
   </div>
 </template>
 
@@ -40,13 +33,40 @@ export default {
       type: Boolean,
       required: false,
     },
+    loop: {
+      type: Boolean,
+      required: false,
+    },
+    fadeIn: {
+      type: Boolean,
+      required: false,
+    },
   },
   mounted() {
-    const vid = this.$refs.video;
-    vid.addEventListener("ended", this.videoEnded, false);
+    const vidWrapper = this.$refs.video;
+    // console.log(vid);
+    if (vidWrapper) {
+      const vid = vidWrapper.querySelector("video");
+      if (vid) {
+        vid.addEventListener("ended", this.videoEnded, false);
+
+        if (this.fadeIn) {
+          vid.classList.add("fade-in");
+        }
+      }
+    }
+  },
+  computed: {
+    videoSrc() {
+      const element = this.$cloudinary.video.url(this.src, {
+        format: "mp4",
+      });
+      return element;
+    },
   },
   methods: {
     videoEnded() {
+      // console.log("ended");
       this.$emit("video-ended");
     },
   },

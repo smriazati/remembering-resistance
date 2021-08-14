@@ -1,8 +1,10 @@
 <template>
-  <div class="page-container exhibit-intro-page">
+  <div class="exhibit-intro-page">
     <div
       class="background-overlay cover-bg"
-      style="background-image: url('/media/1/All-09.png')"
+      :style="`
+        background-image: url('https://res.cloudinary.com/dn8rmd4ql/video/upload/v1628906458/remembering-resistance-videos/tree-v1_g35ibo.jpg');
+      `"
     ></div>
     <div class="text-wrapper center">
       <h1>Remembering Resistance</h1>

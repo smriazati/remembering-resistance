@@ -20,6 +20,14 @@ export default {
       exhibitNavHeight: 0,
     };
   },
+  transition: {
+    name: "page",
+    mode: "in-out",
+    afterEnter(el) {
+      // reset scroll position
+      document.documentElement.scrollTop = 0;
+    },
+  },
   mounted() {
     if (this.isExhibit) {
       this.$store.commit("sessionInfo/closeMenu");
@@ -27,6 +35,11 @@ export default {
 
     // offset margin for height...
     this.setExhibitNavigationMargin();
+  },
+  watch: {
+    $route() {
+      this.setExhibitNavigationMargin();
+    },
   },
   computed: {
     thisRouteClass() {
@@ -73,8 +86,12 @@ export default {
       const layout = document.getElementById("__layout");
       const layoutHeight = layout.offsetHeight;
       const windowHeight = window.innerHeight;
+      console.log(layoutHeight, windowHeight);
       if (layoutHeight > windowHeight) {
         const exhibitNav = this.$refs.exhibitNav;
+        console.log(
+          exhibitNav.querySelector(".exhibit-navigation").offsetHeight
+        );
         if (exhibitNav) {
           this.exhibitNavHeight = exhibitNav.querySelector(
             ".exhibit-navigation"
@@ -88,4 +105,13 @@ export default {
 
 
 <style>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
 </style>
+

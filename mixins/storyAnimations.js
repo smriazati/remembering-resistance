@@ -190,7 +190,7 @@ export default {
 
                 gsap.set(cta, {
                     opacity: 0,
-                    y: 300
+                    y: 100
                 });
 
                 gsap.to(cta, {

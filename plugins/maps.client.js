@@ -14,7 +14,6 @@ export default function (context, inject) {
         script.async = true
         window.initGoogleMaps = initGoogleMaps
         document.head.appendChild(script)
-        console.log(script)
     }
 
     function initGoogleMaps() {
