@@ -1,7 +1,7 @@
 <template>
   <div class="" :class="isHidden ? 'hide-submissions' : 'show-submissions'">
     <div v-if="isExpanded" class="submissions-container">
-      <div v-if="isEditing && editingTalkback">
+      <div v-if="isEditing && editingTalkback" class="talkback-page">
         <ContentTalkback
           :promptId="editingTalkback"
           :isSubmissions="true"
