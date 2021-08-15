@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div>
-      <ContentTalkback :promptId="name" />
-    </div>
+  <div class="talkback-page">
+    <ContentTalkback :promptId="name" />
   </div>
 </template>
 

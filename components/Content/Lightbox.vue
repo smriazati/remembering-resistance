@@ -4,7 +4,7 @@
     :class="isExpanded ? 'is-expanded' : 'is-collapsed'"
   >
     <div v-if="isExpanded" class="overlay"></div>
-    <div v-if="img">
+    <div v-if="img" class="image-container">
       <figure @click="toggleExpanded">
         <img :src="img.src" :alt="img.alt" />
         <figcaption v-if="img.caption">{{ img.caption }}</figcaption>
@@ -16,7 +16,7 @@
       </figure>
     </div>
 
-    <button v-if="isExpanded" @click="toggleExpanded">
+    <button v-if="isExpanded" @click="toggleExpanded" class="close-lightbox">
       <span>Close</span>
     </button>
   </div>

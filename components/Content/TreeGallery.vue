@@ -128,9 +128,11 @@ export default {
       if (!gallery) {
         return;
       }
+      console.log(gallery);
       const scrollElements = gsap.utils.toArray(
         gallery.querySelectorAll(".person-card")
       );
+
       if (!scrollElements) {
         return;
       }
@@ -139,7 +141,7 @@ export default {
       scrollElements.forEach((element) => {
         gsap.set(element, {
           opacity: 0,
-          y: 24,
+          y: 30,
         });
 
         element.anim = gsap.to(element, {
@@ -161,14 +163,14 @@ export default {
       }
 
       function staggerReverseBatch(batch) {
-        gsap.to(batch, {
-          stagger: {
-            each: 0.3,
-            onStart: function () {
-              this.targets()[0].anim.reverse();
-            },
-          },
-        });
+        // gsap.to(batch, {
+        //   stagger: {
+        //     each: 0.15,
+        //     onStart: function () {
+        //       this.targets()[0].anim.reverse();
+        //     },
+        //   },
+        // });
       }
 
       ScrollTrigger.batch(scrollElements, {
